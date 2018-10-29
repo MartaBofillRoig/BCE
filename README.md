@@ -1,5 +1,4 @@
-# CompARE-package
-CompARE functions
+# CompARE 
 
 ## Description
 
