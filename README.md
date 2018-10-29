@@ -7,5 +7,5 @@ This repository contains the R functions for the shiny-app CompARE (https://cinn
 
 
 ## BG_paper
-Source  code  for implementing and reproducing  the procedures discussed in Bofill-Gómez (2018).
+Source  code  for implementing and reproducing  the procedures discussed in Bofill-Gómez (https://arxiv.org/abs/1807.01305).
 
