@@ -1,4 +1,5 @@
 # CompARE 
+CompARE is a web-platform inspired to provide help on issues relating to trials with composite endpoints.
 
 ## Description
 
