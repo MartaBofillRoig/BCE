@@ -7,8 +7,9 @@ This repository contains the R functions for the shiny-app CompARE (https://cinn
 
 ## BG_AREpaper
 Source  code  for implementing and reproducing  the procedures discussed in Bofill&Gómez 2018:
+
 Selection of composite binary endpoints in clinical trials
-Biom J. 2018 Mar;60(2):246-261. doi: 10.1002/bimj.201600229.  
+Biom J. 2018 Mar;60(2):246-261.  
 (https://onlinelibrary.wiley.com/doi/abs/10.1002/bimj.201600229).
 
 ## BG_paper
