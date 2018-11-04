@@ -12,6 +12,6 @@ Selection of composite binary endpoints in clinical trials
 Biom J. 2018 Mar;60(2):246-261.  
 (https://onlinelibrary.wiley.com/doi/abs/10.1002/bimj.201600229).
 
-## BG_paper
+## BG_SSpaper
 Source  code  for implementing and reproducing  the procedures discussed in Bofill&Gómez (https://arxiv.org/abs/1807.01305).
 
