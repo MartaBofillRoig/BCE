@@ -8,7 +8,7 @@ The repository also contains the source files of the papers:
 
 	* Selection of composite binary endpoints in clinical trials. Biom J. 2018 Mar; 60(2):246-261. 
 	
-	* Sample size derivation for composite binary endpoints. arXiv:1807.01305
+	* Sample size derivation for composite binary endpoints. Stat in Med. DOI: 10.1002/sim.8092.
 
 ## BG_AREpaper
 Source  code  for implementing and reproducing  the procedures discussed in Bofill&Gómez 
