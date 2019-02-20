@@ -1,0 +1,23 @@
+.title-slide hgroup h1 {
+  font-size: 36px;
+  letter-spacing: 0;
+  color: #3399ff;
+}
+
+h2 { 
+ color: #3399ff;		
+}
+h3 { 
+ color: #3399ff;		
+}
+ul {
+  /*display: block;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;*/
+  list-style-type: square;
+  color: black;
+}
