@@ -7,6 +7,7 @@
 ################################################################
 # PREAMBLE
 ################################################################ 
+setwd("C:/Users/marta.bofill/Dropbox/C5/Scripts/2017 Shiny/CompARE/BG_CompAREpaper")
 library(ggplot2)
 source('RFunctions.R')
 
@@ -66,11 +67,17 @@ fp <- function(x,p10, p11, p20, p21) ARE.p.binary.endpoints(p10, p11, p20, p21, 
 ymax <- min(max(2,ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.min)+0.5), 100)
 ymin <- min(0.5, max(0.005,min(ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.max) -0.15)))
 
+
+windows(width = 9, height = 6)
 ggplot(data.frame(x=c(rho.min, rho.max)), aes(x)) + stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=p21),size=1.3)+  
   stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=0.020),size=1.3,col=2)+ 
   stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=0.025),size=1.3,col=3)+  
-  geom_hline(yintercept = 1,col='black',linetype=2)  + ylim(ymin, ymax)  + xlab('Correlation') + ylab('ARE') 
-# +guides(col=guide_legend(title="p21 Endpoint 2")) 
+  geom_hline(yintercept = 1,col='black',linetype=2) +  
+  scale_y_log10(breaks=c(0.1,0.2,0.5,0.65,0.8,1,1.25,1.5,2,5,10),limits=c(ymin,ymax)) +scale_x_continuous(limits=c(0,1))+
+  guides(col=guide_legend(title="Correlation")) + xlab('Correlation') + ylab('ARE') +
+  theme(legend.position="bottom",
+        axis.text=element_text(size=10),
+        axis.title=element_text(size=15,face="bold"))   
 
 
 ################################################################ 
@@ -78,15 +85,25 @@ ggplot(data.frame(x=c(rho.min, rho.max)), aes(x)) + stat_function(fun=fp,args=li
 ################################################################ 
 round(c(rho.min,(rho.max-rho.min)/2,rho.max),2 )
 
-round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=rho.min),2)
-round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=(rho.max-rho.min)/2),2)
-round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=rho.max),2)
 
-round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, rho.min))
-round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, (rho.max-rho.min)/2))
-round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, rho.max))
+################################################################ 
+round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0),2)
+round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0.4),2)
+round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0.7),2)
 
-round(Bahadur.composite(p10,p20,rho.min),2)
-round(Bahadur.composite(p10,p20,(rho.max-rho.min)/2),2)
-round(Bahadur.composite(p10,p20,rho.max),2)
+round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0))
+round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0.4))
+round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0.7))
+
+round(Bahadur.composite(p10,p20,0),2)
+round(Bahadur.composite(p10,p20,0.4),2)
+round(Bahadur.composite(p10,p20,0.7),2)
+
+round(cond.prob(p10,p20,0),2)
+round(cond.prob(p10,p20,0.4),2)
+round(cond.prob(p10,p20,0.7),2) 
+# round(cond.prob(p10,p20,rho.max),2) 
+
+corr.composite(p10, p20, 0.084) 
+ 
 

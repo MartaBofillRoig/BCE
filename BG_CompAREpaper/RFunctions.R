@@ -20,6 +20,28 @@ Bahadur.composite<- function(p1, p2, rho){
   return(p.composite)
 }
 
+# FUNCTION: Correlation.composite
+################################################################ 
+# pk: probability of the k-th endpoint (k=1,2)
+# rho: correlation between the endpoints
+
+corr.composite<- function(p1, p2, pce){
+  
+  corr<- (pce - 1 +  (1-p1)*(1-p2))/sqrt(p1*p2*(1-p1)*(1-p2))
+  return(corr)
+}
+
+
+# FUNCTION: Cond.probability (X1|X2)
+################################################################ 
+# pk: probability of the k-th endpoint (k=1,2)
+# rho: correlation between the endpoints
+
+cond.prob<- function(p1, p2, rho){
+  
+  cond.probability <-  p1 +rho*sqrt(p1*p2*(1-p1)*(1-p2) )/p2
+  return(cond.probability)
+}
 
 # FUNCTION: Correlation bounds
 ################################################################ 
