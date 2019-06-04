@@ -58,8 +58,8 @@ f <- function(x,p10, p20, OR1, OR2) ARE.betaOR.binary.endpoints(p10, p20, OR1, O
 ymax <- min(max(2,ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.min)+0.5), 100)
 ymin <- min(0.5, max(0.005,min(ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.max) -0.15)))
 
-ggplot(data.frame(x=c(0, 1)), aes(x)) + stat_function(fun=f,args=list(p10=p10, p20=p20, OR1=OR1, OR2=OR2),size=1.3)+  
-  geom_hline(yintercept = 1,col='black',linetype=2) + ylim(ymin, ymax)  + xlab('Correlation') + ylab('ARE')
+# ggplot(data.frame(x=c(0, 1)), aes(x)) + stat_function(fun=f,args=list(p10=p10, p20=p20, OR1=OR1, OR2=OR2),size=1.3)+  
+#   geom_hline(yintercept = 1,col='black',linetype=2) + ylim(ymin, ymax)  + xlab('Correlation') + ylab('ARE')
 
 
 # ARE in p
@@ -69,7 +69,8 @@ ymin <- min(0.5, max(0.005,min(ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, r
 
 
 windows(width = 9, height = 6)
-ggplot(data.frame(x=c(rho.min, rho.max)), aes(x)) + stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=p21),size=1.3)+  
+ggplot(data.frame(x=c(rho.min, rho.max)), aes(x)) + 
+  stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=p21),size=1.3)+  
   stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=0.020),size=1.3,col=2)+ 
   stat_function(fun=fp,args=list(p10=p10, p20=p20, p11=p11, p21=0.025),size=1.3,col=3)+  
   geom_hline(yintercept = 1,col='black',linetype=2) +  
