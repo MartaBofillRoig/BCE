@@ -105,6 +105,10 @@ round(cond.prob(p10,p20,0.4),2)
 round(cond.prob(p10,p20,0.7),2) 
 # round(cond.prob(p10,p20,rho.max),2) 
 
+round(cond.prob(p20,p10,0),2)
+round(cond.prob(p20,p10,0.4),2)
+round(cond.prob(p20,p10,0.7),2) 
+
 corr.composite(p10, p20, 0.084) 
  
 
