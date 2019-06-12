@@ -80,6 +80,7 @@ ggplot(data.frame(x=c(rho.min, rho.max)), aes(x)) +
         axis.text=element_text(size=10),
         axis.title=element_text(size=15,face="bold"))   
 
+round(c(p21-p20,0.020-p20,0.025-p20),3)
 
 ################################################################ 
 # TABLE PROBABILITIES UNDER CONTROL GROUP / ARE / SAMPLE SIZE 
