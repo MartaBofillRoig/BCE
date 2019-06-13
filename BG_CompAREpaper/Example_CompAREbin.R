@@ -90,25 +90,35 @@ round(c(rho.min,(rho.max-rho.min)/2,rho.max),2 )
 
 ################################################################ 
 round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0),2)
+round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0.1),2)
 round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0.4),2)
 round(ARE.p.binary.endpoints(p10, p11, p20, p21, rho=0.7),2)
 
 round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0))
+round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0.1))
 round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0.4))
 round(SampleSize.CBE.Diff(p10, p20, p11-p10, p21-p20, 0.7))
 
 round(Bahadur.composite(p10,p20,0),2)
+round(Bahadur.composite(p10,p20,0.1),2)
 round(Bahadur.composite(p10,p20,0.4),2)
 round(Bahadur.composite(p10,p20,0.7),2)
 
 round(cond.prob(p10,p20,0),2)
+round(cond.prob(p10,p20,0.1),2)
 round(cond.prob(p10,p20,0.4),2)
 round(cond.prob(p10,p20,0.7),2) 
 # round(cond.prob(p10,p20,rho.max),2) 
 
 round(cond.prob(p20,p10,0),2)
+round(cond.prob(p20,p10,0.1),2)
 round(cond.prob(p20,p10,0.4),2)
 round(cond.prob(p20,p10,0.7),2) 
+
+round(diff.pcomp(p10, p20, p11, p21, 0),3)
+round(diff.pcomp(p10, p20, p11, p21, 0.1),3)
+round(diff.pcomp(p10, p20, p11, p21, 0.4),3)
+round(diff.pcomp(p10, p20, p11, p21, 0.7),3)
 
 corr.composite(p10, p20, 0.084) 
  
