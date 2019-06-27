@@ -111,20 +111,19 @@ RHO <- seq(0,1,0.01)
 d <- data.frame(rho=rep(RHO,3),
                 p10=p10,p20=p20,p11=p11,p21=rep(c(p21,0.020,0.025),each=length(RHO)))
 d$f <- with(d,fp(rho,p10, p11, p20, p21))
+d$RD <- with(d,p20-p21)
 ymax <- min(max(2,ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.min)+0.5), 100)
 ymin <- min(0.5, max(0.005,min(ARE.betaOR.binary.endpoints(p10, p20, OR1, OR2, rho0.max) -0.15)))
 
 windows(width = 9, height = 6)
-ggplot(d, aes(x=rho,y=f,col=as.factor(round(p21,3)))) + 
+ggplot(d, aes(x=rho,y=f,col=factor(formatC(RD,digits=3,format='f'),levels=c('0.012','0.010','0.007')))) + 
   geom_line(size=1.3)+  
   scale_y_log10(breaks=c(0.1,0.2,0.5,0.65,0.8,1,1.25,1.5,2,5,10),limits=c(ymin,ymax)) +scale_x_continuous(limits=c(0,1))+
   geom_hline(yintercept = 1,col='black',linetype=2) +
-  guides(col=guide_legend(title=expression(bold(Probability~E[2]~"treated group")))) + xlab('Correlation') + ylab('ARE') +
+  guides(col=guide_legend(title=expression(bold("Absolute Reduction"~E[2])))) + xlab('Correlation') + ylab('ARE') +
   theme(legend.position="bottom",
         axis.text=element_text(size=10),
         axis.title=element_text(size=15,face="bold"))
-
-d2 = round(c(p21,0.020,0.025)-p20,3)
 ################################################################ 
 # TABLE PROBABILITIES UNDER CONTROL GROUP / ARE / SAMPLE SIZE 
 ################################################################ 
