@@ -2,7 +2,11 @@
 
 ## Description
 
-This repository contains the R functions for the shiny-app CompARE (https://cinna.upc.edu/compare/). CompARE is a web-platform inspired to provide help on issues relating to trials with composite endpoints.
+CompARE is a web-platform inspired to provide help on issues relating to trials with composite endpoints.
+
+https://cinna.upc.edu/compare/
+
+This repository contains some of the R functions for the shiny-app CompARE within the setting of binary endpoints.
 
 The repository also contains the source files of the papers:
 
