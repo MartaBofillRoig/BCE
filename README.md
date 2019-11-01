@@ -34,6 +34,10 @@ The code includes:
 	
 ## Related repositories
 
-The repository https://github.com/CompARE-Composite/Functions contains the all R functions for the shiny-app CompARE (https://cinna.upc.edu/compare/) with code for reproduce some motivating examples. 
+The repository https://github.com/CompARE-Composite/Functions contains  all R functions for the shiny-app CompARE (https://cinna.upc.edu/compare/) and the code to reproduce some motivating examples. 
+
+Check the account 
+https://github.com/CompARE-Composite/
+for further information and coding of CompARE.
 	
 
