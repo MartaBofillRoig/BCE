@@ -29,3 +29,9 @@ The code includes:
 	* Simulation Study
 	
 	* Case Study
+	
+## Related repositories
+
+The repository https://github.com/CompARE-Composite/Functions contains the all R functions for the shiny-app CompARE (https://cinna.upc.edu/compare/) with code for reproduce some motivating examples. 
+	
+
