@@ -12,6 +12,8 @@ This repository contains some of the R functions for the shiny-app CompARE withi
 	
 	* Sample size derivation for composite binary endpoints. Stat in Med. DOI: 10.1002/sim.8092.
 
+The code of the shiny app CompARE can be found at: https://github.com/CompARE-Composite/CompARE-package
+
 ## BG_AREpaper
 Source  code  for implementing and reproducing  the procedures discussed in Bofill&Gómez 
 (https://onlinelibrary.wiley.com/doi/abs/10.1002/bimj.201600229).
