@@ -1,4 +1,4 @@
-# CompARE  
+# Design and analysis of randomised treatment-control trials with binary composite endpoints 
 
 ## Description
 
