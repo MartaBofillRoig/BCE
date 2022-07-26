@@ -2,17 +2,13 @@
 
 ## Description
 
-CompARE is a web-platform inspired to provide help on issues relating to trials with composite endpoints.
-
-https://cinna.upc.edu/compare/
-
-This repository contains some of the R functions for the shiny-app CompARE within the setting of binary endpoints as well as the source files of the papers:
+This repository contains R functions for the design and analysis of trials with binary composite endpoints as well as the source files of the papers:
 
 	* Selection of composite binary endpoints in clinical trials. Biom J. 2018 Mar; 60(2):246-261. 
 	
 	* Sample size derivation for composite binary endpoints. Stat in Med. DOI: 10.1002/sim.8092.
 
-The code of the shiny app CompARE can be found at: https://github.com/CompARE-Composite/CompARE-package
+Some of the functions included here are also covered in the R package CompAREdesign (https://cran.r-project.org/package=CompAREdesign) and used for the shiny-app CompARE (https://cinna.upc.edu/compare/). Further information about CompARE can be found at: https://github.com/CompARE-Composite/CompARE-package
 
 ## BG_AREpaper
 Source  code  for implementing and reproducing  the procedures discussed in Bofill&Gómez 
